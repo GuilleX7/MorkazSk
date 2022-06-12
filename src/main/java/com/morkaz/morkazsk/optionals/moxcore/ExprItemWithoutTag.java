@@ -58,7 +58,7 @@ public class ExprItemWithoutTag extends SimpleExpression<ItemStack> {
 		String tagKey = tagKeyExpr.getSingle(event);
 		ItemStack itemStack = itemStackExpr.getSingle(event);
 		if (tagKey != null && itemStack != null){
-			return new ItemStack[]{ItemUtils.removeCustomTag(itemStack, tagKey)};
+			return new ItemStack[]{ItemUtils.setCustomTagObject(itemStack, tagKey, null)};
 		}
 		return new ItemStack[]{};
 	}

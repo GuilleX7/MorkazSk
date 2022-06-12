@@ -8,7 +8,7 @@ import ch.njol.skript.lang.util.SimpleExpression;
 import ch.njol.util.Kleenean;
 import ch.njol.util.coll.CollectionUtils;
 import com.morkaz.morkazsk.managers.RegisterManager;
-import me.neznamy.tab.api.TABAPI;
+import me.neznamy.tab.api.TabAPI;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
@@ -45,7 +45,7 @@ public class ExprTopArmorstandOfPlayer extends SimpleExpression<Entity> {
 
 	protected Entity[] get(Event event) {
 		Player player = playerExpr.getSingle(event);
-		TABAPI.getPlayer(player.getUniqueId());
+		TabAPI.getInstance().getPlayer(player.getUniqueId());
 		return null;
 		// TODO
 	}
